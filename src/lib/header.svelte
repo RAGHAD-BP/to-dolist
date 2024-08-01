@@ -1,6 +1,6 @@
 <script lang="ts">
     import dayjs from 'dayjs';
-    let period=dayjs().format('A') =='AM'?'morning🌻':'night🪻';
+    let period= dayjs().format('A') != 'AM' ? 'night⭐' : 'morning☀️';
     import {ListBox, ListBoxItem, type PopupSettings} from "@skeletonlabs/skeleton";
     import {popup} from "@skeletonlabs/skeleton";
 
@@ -18,7 +18,7 @@ $: console.log(comboboxValue);
     <div>
         <h1 class="text-3xl text-surface-900 mb-2">Good {period}</h1>
         <h2 class="text-surface-900/80">{dayjs().format('dddd , D-M-YYYY ')}</h2>
-        <h3 class="text-xl text-surface-900/50">{dayjs().format('h:m A')}</h3>
+        <h3 class="text-xl text-surface-900/50">{dayjs().format('h:mm A')}</h3>
     </div>
     <button
             class="btn variant-filled w-40 h-fit py-4 justify-between bg-yellow-400"
@@ -29,7 +29,7 @@ $: console.log(comboboxValue);
     </button>
 
     <div class="card w-48 shadow-xl py-2 bg-white-200 " data-popup="popupCombobox">
-        <ListBox rounded="rounded-none">
+        <ListBox rounded="rounded-none"active="bg-yellow-200">
             <ListBoxItem bind:group={comboboxValue} name="medium" value="All">All</ListBoxItem>
             <ListBoxItem bind:group={comboboxValue} name="medium" value="Today">Today</ListBoxItem>
             <ListBoxItem bind:group={comboboxValue} name="medium" value="This week ">This week</ListBoxItem>
