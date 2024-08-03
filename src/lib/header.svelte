@@ -16,12 +16,12 @@ $: console.log(comboboxValue);
 </script>
 <header class="flex justify-between">
     <div>
-        <h1 class="text-3xl text-surface-900 mb-2">Good {period}</h1>
+        <h1 class="text-2xl lg-text-4xl text-surface-900 ">Good {period}</h1>
         <h2 class="text-surface-900/80">{dayjs().format('dddd , D-M-YYYY ')}</h2>
         <h3 class="text-xl text-surface-900/50">{dayjs().format('h:mm A')}</h3>
     </div>
     <button
-            class="btn variant-filled w-40 h-fit py-4 justify-between bg-yellow-400"
+            class="btn variant-filled w-36 px-3 h-fit py-4 justify-between bg-yellow-400"
             use:popup={popupCombobox}>
         <span>{comboboxValue}</span>
         <span > <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m7 10l5 5m0 0l5-5"/></svg>

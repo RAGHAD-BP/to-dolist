@@ -1,29 +1,14 @@
 <script lang="ts">
 	import Header from "$lib/header.svelte";
-	import {tasks}from '$lib/stores/tasks';
-	import dayjs from 'dayjs';
-	// const updateNAME = (tasks:string): string => tasks + '1';
-	let title="";
-	 //$:console.log(title);
-	function addTask(){
-		tasks.update((currentTasks)=>{
-			currentTasks.push({
-						title,
-						assignedDate: dayjs(),
-						isDone: false,
-					});
-		return currentTasks;
-		});
-	}
-	$: console.log($tasks);
+	import Taskinput from "$lib/stores/Taskinput.svelte";
+
 </script>
-<div class="p-12 flec-col gap-8">
+<div class="p-2 pt-4 md:p-8 xl:p-12 flec-col gap-8 max-w-screen-lg  mx-auto">
 	<Header />
-
-	<div class="input-group input-group-divider flex justify-between">
-		<input bind:value={title} class="flex-1 py-1 px-2.5
-		!bg-white" type="The task title " placeholder="The task title." />
-		<button on:click={addTask} class="variant-filled-secondary bg-yellow-200">Submit</button>
-	</div>
-
+	<Taskinput/>
+	<ol>
+		<li class="bg-white p-2 xl:p4">
+			jj
+		</li>
+	</ol>
 </div>
