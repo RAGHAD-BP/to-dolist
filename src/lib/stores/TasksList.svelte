@@ -21,7 +21,8 @@ hover:bg-surface-400 rounded-xl ">
             <div class="flex gap-1 ">
                 <button class="btn variant-filled-surface
 hover:bg-surface-400 rounded-xl ">
-                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <svg class="w-6 h-6"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                            stroke-width="1.5">
                             <circle cx="8" cy="2.5" r=".75"/>
