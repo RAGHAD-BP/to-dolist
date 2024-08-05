@@ -31,7 +31,7 @@ function confirmDelet(task:Task){
 {#each $tasks as task}
     {#if task.isDone==doneTasks}
         <div transition:slide></div>
-        <li class="bg-white p-2 xl:p-4 rounded-lg flex justify-between items-center">
+        <li class="bg-white p-2 xl:p-4 rounded-lg flex justify-between items-center ">
             <div>
                 <input bind:checked={task.isDone} class="checkbox border-2x h-6 w-6 border-yellow-500 rounded-lg mx-1" type="checkbox"/>
                 <span> {task.title}</span>
