@@ -1,10 +1,10 @@
 <script lang="ts">
 import {tasks} from "$lib/stores/tasks.js";
 import dayjs from "dayjs";
+import { slide } from 'svelte/transition';
 export let doneTasks:boolean;
 import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton';
  const modalStore = getModalStore();
-
 function confirmDelet(task:Task){
 
     const modal: ModalSettings = {
@@ -30,6 +30,7 @@ function confirmDelet(task:Task){
 </script>
 {#each $tasks as task}
     {#if task.isDone==doneTasks}
+        <div transition:slide></div>
         <li class="bg-white p-2 xl:p-4 rounded-lg flex justify-between items-center">
             <div>
                 <input bind:checked={task.isDone} class="checkbox border-2x h-6 w-6 border-yellow-500 rounded-lg mx-1" type="checkbox"/>
