@@ -39,7 +39,7 @@ function applyfilter(filter:typeof $filter,task:Task):boolean {
 }
 </script>
 {#each $tasks as task}
-    {#if task.isDone==doneTasks &&$filter=="All"&&applyfilter($filter,task)}
+    {#if task.isDone==doneTasks && applyfilter($filter,task)  }
         <div transition:slide></div>
         <li class="bg-white p-2 xl:p-4 rounded-lg flex justify-between items-center h-fit">
             <div>
