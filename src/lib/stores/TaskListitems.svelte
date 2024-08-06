@@ -2,6 +2,7 @@
 import {tasks} from "$lib/stores/tasks.js";
 import dayjs from "dayjs";
 import { slide } from 'svelte/transition';
+import {filter} from "$lib/stores/filter";
 export let doneTasks:boolean;
 import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton';
  const modalStore = getModalStore();
@@ -27,9 +28,18 @@ function confirmDelet(task:Task){
     };
     modalStore.trigger(modal);
 }
+function applyfilter(filter:typeof $filter,task:Task):boolean {
+    switch (filter) {
+        case "Today":
+            return dayjs(task.assignedDate).unix() - dayjs().unix() <= 24 * 60 * 60;
+        case "All":
+        default:
+            return true;
+    }
+}
 </script>
 {#each $tasks as task}
-    {#if task.isDone==doneTasks}
+    {#if task.isDone==doneTasks &&$filter=="All"&&applyfilter($filter,task)}
         <div transition:slide></div>
         <li class="bg-white p-2 xl:p-4 rounded-lg flex justify-between items-center h-fit">
             <div>

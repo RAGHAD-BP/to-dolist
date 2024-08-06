@@ -11,7 +11,9 @@
                 assignedDate:datetime,
                 isDone: false,
             });
-            return currentTasks;
+            return currentTasks.sort((a :Task,b :Task)=>{
+              return dayjs(a.assignedDate).unix()-dayjs(b.assignedDate).unix()
+            });
         });
     }
     $: console.log($tasks);

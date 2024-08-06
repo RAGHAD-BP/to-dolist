@@ -7,10 +7,10 @@ import TaskListitems from "$lib/stores/TaskListitems.svelte";
 </script>
 
 <ol class="gap-2 flex flex-col">
-    <h1>the not comblemet task:</h1>
+    <h1>the not complemed tasks🫵👇:</h1>
     <TaskListitems doneTasks={false} />
             </ol>
 <ol class="gap-2 flex flex-col">
-    <h1>the comblemet task:</h1>
+    <h1>the complemed tasks👏✨:</h1>
     <TaskListitems doneTasks={true}/>
 </ol>
