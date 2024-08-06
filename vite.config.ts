@@ -5,10 +5,10 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 export default defineConfig({
 	plugins: [sveltekit(),
 		purgeCss(),
-		SvelteKitPWA(
+		SvelteKitPWA({
 			manifest:{
-				name:'to-do list'
-	            short_name:'to-do list'
-			}
+				name:'to-do list',
+	short_name:'to-do list',
+}}
 		)]
 });
