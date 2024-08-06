@@ -3,6 +3,11 @@
 	import Taskinput from "$lib/stores/Taskinput.svelte";
 	import TasksList from "$lib/stores/TasksList.svelte"
 </script>
+<svelte:head>
+	<title>
+	to do list📃
+</title>
+</svelte:head>
 <div class="p-2 sm:p-4 pt-8 md:p-8 xl:p-12 flex flex-col gap-4 max-w-screen-lg mx-auto ">
 	<Header />
 	<Taskinput/>
