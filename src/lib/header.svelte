@@ -24,7 +24,7 @@ $: console.log(comboboxValue);
             class="btn variant-filled w-36 px-3z h-fit py-4 justify-between bg-yellow-400"
             use:popup={popupCombobox}>
         <span>{$filter}</span>
-        <span > <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m7 10l5 5m0 0l5-5"/></svg>
+        <span ><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m7 10l5 5m0 0l5-5"/></svg>
         </span>
     </button>
 
