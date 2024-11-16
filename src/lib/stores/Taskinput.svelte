@@ -2,7 +2,7 @@
     import {tasks}from '$lib/stores/tasks';
     import dayjs from 'dayjs';
     let title="";
-    let datetime=dayjs().add(1,"hour").format('YYYY-MM-DDTHH:MM');
+    let datetime=dayjs().add(1,"hour").format('YYYY-MM-DD HH:mm');
     $:console.log(datetime);
     function addTask(){
         tasks.update((currentTasks)=>{
